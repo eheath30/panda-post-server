@@ -1,5 +1,5 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://elliot:<password>@cluster0.fyzximo.mongodb.net/?retryWrites=true&w=majority";
+const uri = "mongodb+srv://elliot:95xE16BOA10QL9dh@cluster0.fyzximo.mongodb.net/?retryWrites=true&w=majority";
 const init = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 init.connect(err => {
   const collection = init.db("test").collection("devices");
