@@ -1,0 +1,1 @@
+const express=require("express"),cors=require("cors"),server=express();server.use(cors()),server.use(express.json());const postRoutes=require("./controllers/posts");server.use("/posts",postRoutes),server.get("/",((e,s)=>s.send("Hello, client!"))),module.exports=server;
