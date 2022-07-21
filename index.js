@@ -1,1 +1,1 @@
-const app=require("./server"),port=3e3;app.listen(3e3,(()=>console.log("Express departed from port 3000")));
+const app=require("./server"),port=process.env.PORT;app.listen(process.env.PORT,(()=>console.log(`Express departed from port ${port}`)));
