@@ -1,10 +1,10 @@
 const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://elliot:95xE16BOA10QL9dh@cluster0.fyzximo.mongodb.net/?retryWrites=true&w=majority";
-const init = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-init.connect(err => {
-  const collection = init.db("test").collection("devices");
+const uri = "mongodb+srv://elliot:<password>@cluster0.fyzximo.mongodb.net/?retryWrites=true&w=majority";
+const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
+client.connect(err => {
+  const collection = client.db("test").collection("devices");
   // perform actions on the collection object
-  init.close();
+  client.close();
 });
 
-module.exports=init;
+module.exports=client;
